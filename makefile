@@ -8,9 +8,12 @@ OF=obj
 
 CPPFLAGS=-Wall -Werror -Wextra -c
 
-OBJ=$(OF)/main.o $(OF)/startgame.o
+OBJ=$(OF)/main.o $(OF)/startgame.o $(OF)/maingame.o
 
 all: $(EXEC_FILE)
+
+$(OF)/maingame.o: $(SRC)/maingame.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/maingame.cpp -o $(OF)/maingame.o
 
 $(OF)/startgame.o: $(SRC)/startgame.cpp
 	$(CC) $(CPPFLAGS) $(SRC)/startgame.cpp -o $(OF)/startgame.o
