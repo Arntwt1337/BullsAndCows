@@ -9,4 +9,5 @@ void start_game() {
     ran[temp] = rand() % 10;
     std::cout << ran[temp];
   }
+  game(ran);
 }
