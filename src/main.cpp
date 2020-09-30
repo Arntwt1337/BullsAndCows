@@ -1,5 +1,5 @@
-#include <iostream>
 #include "func.h"
+#include <iostream>
 
 int main() {
   int choose;
@@ -11,6 +11,7 @@ int main() {
       break;
     case 1:
       system("clear");
+      start_game();
       break;
     default:
       std::cout << "Enter 0 or 1";
