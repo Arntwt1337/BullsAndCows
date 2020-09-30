@@ -24,6 +24,9 @@ $(OF)/main.o: $(SRC)/main.cpp
 $(EXEC_FILE): $(OBJ)
 	$(CC) $(OBJ) -o $(EXEC_FILE)
 
+clear:
+	rm -rf $(OF)/*.o
+
 start:
 	./bin/prog.exe
 
