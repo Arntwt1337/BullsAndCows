@@ -7,7 +7,6 @@ void start_game() {
   int ran[4];
   for (int temp = 0; temp < 4; temp++) {
     ran[temp] = rand() % 10;
-    std::cout << ran[temp];
   }
   game(ran);
 }
