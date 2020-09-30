@@ -6,6 +6,9 @@ int game(int *ran) {
   int c[10], a, b; // c - ваше слово
   while (true) {
     std::cin >> a;
+    if (a == 0) {
+      return 0;
+    }
     for (int i = 3; i >= 0; i--) {
       b = a % 10;
       c[i] = b;
@@ -18,4 +21,5 @@ int game(int *ran) {
       std::cout << c[temp];
     }
   }
+  return 0;
 }
