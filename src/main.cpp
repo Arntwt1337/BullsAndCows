@@ -2,6 +2,11 @@
 #include <iostream>
 
 int main() {
+  system("clear");
+  system("figlet BULLS");
+  std::cout << "\n";
+  system("figlet and COWS");
+  std::cout << "          0 - to exit, 1 - to start\n";
   int choose;
   while (true) {
     std::cin >> choose;
