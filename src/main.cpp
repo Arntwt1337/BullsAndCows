@@ -15,3 +15,4 @@ int main() {
       std::cout << "Enter 0 or 1";
     }
   }
+}
