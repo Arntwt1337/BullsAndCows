@@ -1,6 +1,6 @@
 #include "func.h"
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 void save(int step) {
   std::cout << "You won!\nEnter your name: ";
