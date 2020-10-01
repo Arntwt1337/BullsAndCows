@@ -5,6 +5,8 @@
 int game(int *ran) {
   int c[10], a, b; // c - ваше слово
   while (true) {
+  int cow = 0;
+  int bull = 0;
     std::cin >> a;
     if (a == 0) {
       return 0;
