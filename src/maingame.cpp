@@ -5,8 +5,8 @@
 int game(int *ran) {
   int c[10], a, b; // c - ваше слово
   while (true) {
-  int cow = 0;
-  int bull = 0;
+    int cow = 0;
+    int bull = 0;
     std::cin >> a;
     if (a == 0) {
       return 0;
@@ -22,8 +22,11 @@ int game(int *ran) {
     for (int temp = 0; temp < 4; temp++) {
       std::cout << c[temp];
     }
-  bull = bulls_calc(ran, c, bull);
-  cow = bulls_calc(ran, c, cow);
+    bull = bulls_calc(ran, c, bull);
+    cow = bulls_calc(ran, c, cow);
+    if (bull == 4) {
+      return 1;
+    }
   }
   return 0;
 }
