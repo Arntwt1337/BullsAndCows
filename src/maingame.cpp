@@ -3,7 +3,7 @@
 #include <iostream>
 
 int game(int *ran) {
-  int c[10], a, b, step = 0; // c - ваше слово
+  int c[4], a, b, step = 0; // c - ваше слово
   while (true) {
     int cow = 0;
     int bull = 0;
@@ -19,9 +19,9 @@ int game(int *ran) {
     }
     bull = bulls_calc(ran, c); // считаем быков
     cow = cows_calc(ran, c);   // считаем коров
-    std::cout << step << ": " << bull << " - bulls   " << cow - bull
-              << " - cows\n";
+    std::cout << step << ": " << bull << " - bulls   " << cow << " - cows\n";
     if (bull == 4) {
+      save(step);
       return 1;
     }
   }
