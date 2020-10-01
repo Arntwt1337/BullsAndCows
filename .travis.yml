@@ -2,6 +2,7 @@ os: linux
 dist: bionic
 
 script:
+  - bash googleTest.sh
   - make && make clear && make test && make start_test
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
 language: cpp
