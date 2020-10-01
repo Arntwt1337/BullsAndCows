@@ -4,7 +4,7 @@
 
 using namespace std;
 
-TEST(BullsTest, RanTest) {
+TEST(BullsTest, EqTest) {
   srand(time(NULL));
   int ran[4], c[4];
   for (int j = 0; j < 4; j++) {
@@ -14,4 +14,9 @@ TEST(BullsTest, RanTest) {
   EXPECT_EQ(bulls_calc(ran, c, 0), 4);
 }
 
-
+TEST(BullsTest, UnEqTest) {
+  srand(time(NULL));
+  int ran[] = {0, 0, 0, 0};
+  int c[] = {1, 1, 1, 1};
+  EXPECT_EQ(bulls_calc(ran, c, 0), 0);
+}
