@@ -4,13 +4,31 @@ CC=g++
 
 EXEC_FILE=bin/prog.exe
 
+TEST_FOLDER=test
+
+TEST_FILE = test/test.exe
+
 OF=obj
 
 CPPFLAGS=-Wall -Werror -Wextra -c
 
+GOOGLE_TEST_INCLUDE = /usr/local/include
+
+CPPTEST_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
+
 OBJ=$(OF)/main.o $(OF)/startgame.o $(OF)/maingame.o $(OF)/Cows.o $(OF)/Bulls.o
 
+OBJ_TEST=$(OF)/Cows.o $(OF)/Bulls.o $(OF)/test.o $(OF)/main_test.o 
+
 all: $(EXEC_FILE)
+
+test: $(TEST_FILE)
+
+$(OF)/test.o: $(TEST_FOLDER)/test.cpp
+	$(CC) $(CPPTEST_FLAGS) $(TEST_FOLDER)/test.cpp -o $(OF)/test.o
+
+$(OF)/main_test.o: $(TEST_FOLDER)/main.cpp
+	$(CC) $(CPPFLAGS) $(TEST_FOLDER)/main.cpp -o $(OF)/main_test.o
 
 $(OF)/Cows.o: $(SRC)/Cows.cpp
 	$(CC) $(CPPFLAGS) $(SRC)/Cows.cpp -o $(OF)/Cows.o
@@ -30,6 +48,9 @@ $(OF)/main.o: $(SRC)/main.cpp
 $(EXEC_FILE): $(OBJ)
 	$(CC) $(OBJ) -o $(EXEC_FILE)
 
+$(TEST_FILE): $(OBJ_TEST)
+	$(CC) $(TESTFLAG) $(OBJ_TEST) -L /usr/local/lib -l gtest -l pthread -o $(TEST_FILE)
+	
 clear:
 	rm -rf $(OF)/*.o
 
