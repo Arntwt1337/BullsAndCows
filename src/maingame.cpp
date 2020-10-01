@@ -20,6 +20,8 @@ int game(int *ran) {
     for (int temp = 0; temp < 4; temp++) {
       std::cout << c[temp];
     }
+  bull = bulls_calc(ran, c, bull);
+  cow = bulls_calc(ran, c, cow);
   }
   return 0;
 }
