@@ -14,6 +14,6 @@ void start_game() {
     std::cout << "Do you really want to exit\n Yes -0     Restart - 1\n";
     break;
   case 1:
-    std::cout << "You won!\n 1 - to restart, 0 - to exit";
+    std::cout << "\nYou won!\n 1 - to restart, 0 - to exit";
   }
 }
