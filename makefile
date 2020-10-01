@@ -57,3 +57,5 @@ clear:
 start:
 	./bin/prog.exe
 
+start_test:
+	./test/test.exe
