@@ -19,7 +19,8 @@ int game(int *ran) {
     }
     bull = bulls_calc(ran, c); // считаем быков
     cow = cows_calc(ran, c);   // считаем коров
-    std::cout << step << ": " << bull << " - bulls   " << cow << " - cows\n";
+    std::cout << step << ": " << bull << " - bulls   " << cow - bull
+              << " - cows\n";
     if (bull == 4) {
       save(step);
       return 1;
