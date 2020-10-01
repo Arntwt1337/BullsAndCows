@@ -18,7 +18,7 @@ int game(int *ran) {
       a = (a - b) / 10; // разделяем слово на части
     }
     bull = bulls_calc(ran, c); // считаем быков
-    cow = cows_calc(ran, c);    // считаем коров
+    cow = cows_calc(ran, c);   // считаем коров
     std::cout << step << ": " << bull << " - bulls   " << cow - bull
               << " - cows\n";
     if (bull == 4) {
