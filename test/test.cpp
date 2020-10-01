@@ -56,7 +56,7 @@ TEST(CowTest, UnEqTest) {
   srand(time(NULL));
   int ran[] = {0, 0, 0, 0};
   int c[] = {1, 1, 1, 1};
-  EXPECT_EQ(cows_calc(ran, c), 4);
+  EXPECT_EQ(cows_calc(ran, c), 0);
 }
 
 TEST(CowsTest, OneRight) {
