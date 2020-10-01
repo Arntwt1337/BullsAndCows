@@ -16,7 +16,7 @@ GOOGLE_TEST_INCLUDE = /usr/local/include
 
 CPPTEST_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
 
-OBJ=$(OF)/main.o $(OF)/startgame.o $(OF)/maingame.o $(OF)/Cows.o $(OF)/Bulls.o
+OBJ=$(OF)/main.o $(OF)/startgame.o $(OF)/maingame.o $(OF)/Cows.o $(OF)/Bulls.o $(OF)/Save.o 
 
 OBJ_TEST=$(OF)/Cows.o $(OF)/Bulls.o $(OF)/test.o $(OF)/main_test.o 
 
@@ -29,6 +29,9 @@ $(OF)/test.o: $(TEST_FOLDER)/test.cpp
 
 $(OF)/main_test.o: $(TEST_FOLDER)/main.cpp
 	$(CC) $(CPPFLAGS) $(TEST_FOLDER)/main.cpp -o $(OF)/main_test.o
+
+$(OF)/Save.o: $(SRC)/Save.cpp
+	$(CC) $(CPPFLAGS) $(SRC)/Save.cpp -o $(OF)/Save.o
 
 $(OF)/Cows.o: $(SRC)/Cows.cpp
 	$(CC) $(CPPFLAGS) $(SRC)/Cows.cpp -o $(OF)/Cows.o
