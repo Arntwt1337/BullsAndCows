@@ -24,6 +24,7 @@ int game(int *ran) {
     }
     bull = bulls_calc(ran, c, bull);
     cow = bulls_calc(ran, c, cow);
+    std::cout << bull << " - bulls   " << cow - bull << " - cows";
     if (bull == 4) {
       return 1;
     }
