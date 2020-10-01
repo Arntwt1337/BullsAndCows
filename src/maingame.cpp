@@ -3,10 +3,12 @@
 #include <iostream>
 
 int game(int *ran) {
-  int c[10], a, b; // c - ваше слово
+  int c[10], a, b, s; // c - ваше слово
+  step = 0;
   while (true) {
     int cow = 0;
     int bull = 0;
+    step++;
     std::cin >> a;
     if (a == 0) {
       return 0;
@@ -18,7 +20,7 @@ int game(int *ran) {
     }
     bull = bulls_calc(ran, c, bull);
     cow = bulls_calc(ran, c, cow);
-    std::cout << bull << " - bulls   " << cow - bull << " - cows";
+    std::cout << step << ": " << bull << " - bulls   " << cow - bull << " - cows\n";
     if (bull == 4) {
       return 1;
     }

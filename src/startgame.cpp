@@ -2,7 +2,7 @@
 #include <iostream>
 
 void start_game() {
-  std::cout << "Game started";
+  std::cout << "Game started\n";
   int game_flow;
   srand(time(NULL));
   int ran[4];
