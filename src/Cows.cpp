@@ -1,4 +1,5 @@
-int cows_calc(int *ran, int *c, int cow) { //Считаем коров
+int cows_calc(int *ran, int *c) { //Считаем коров
+  int cow = 0;
   for (int i = 0; i < 4; i++) {
     for (int j = 0; j < 4; j++) {
       if (c[i] == ran[j]) {
