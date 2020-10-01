@@ -11,26 +11,26 @@ TEST(BullsTest, EqTest) {
     ran[j] = rand();
     c[j] = ran[j];
   }
-  EXPECT_EQ(bulls_calc(ran, c, 0), 4);
+  EXPECT_EQ(bulls_calc(ran, c), 4);
 }
 
 TEST(BullsTest, UnEqTest) {
   srand(time(NULL));
   int ran[] = {0, 0, 0, 0};
   int c[] = {1, 1, 1, 1};
-  EXPECT_EQ(bulls_calc(ran, c, 0), 0);
+  EXPECT_EQ(bulls_calc(ran, c), 0);
 }
 
 TEST(BullsTest, OneRight) {
   srand(time(NULL));
   int ran[] = {1, 0, 0, 0};
   int c[] = {1, 1, 1, 1};
-  EXPECT_EQ(bulls_calc(ran, c, 0), 1);
+  EXPECT_EQ(bulls_calc(ran, c), 1);
 }
 
 TEST(BullsTest, TwoRight) {
   srand(time(NULL));
   int ran[] = {1, 1, 0, 0};
   int c[] = {1, 1, 1, 1};
-  EXPECT_EQ(bulls_calc(ran, c, 0), 2);
+  EXPECT_EQ(bulls_calc(ran, c), 2);
 }
