@@ -3,8 +3,9 @@ dist: bionic
 
 script:
   - bash googleTest.sh
-  - make && make clear && make test && make start_test
+  - make && make test && make start_test && make clear 
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
+  - git ls-files test/ | xargs clang-format -i && git diff --exit-code
 language: cpp
 compiler: 
   -g++
