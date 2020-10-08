@@ -12,8 +12,7 @@ int main() {
     std::cin >> choose;
     switch (choose) {
     case 0:
-      exit(0);
-      break;
+      return 0;
     case 1:
       system("clear");
       start_game();
